@@ -1,10 +1,22 @@
 source 'https://rubygems.org'
 
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
+gem "omniauth-google-oauth2"
+gem 'omniauth-facebook'
+gem 'google-api-client', '~> 0.9',require: 'google/apis/gmail_v1'
+gem 'gmail'
+gem 'mail'
+gem 'ruby-gmail'
+#gem 'ruby-gmail'
+#gem 'twilio-ruby' 
+gem 'sinatra'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'mail'
+gem 'gmail_xoauth'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
@@ -23,7 +35,7 @@ gem 'jwt'
 gem 'json'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'hashie'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 #gem 'jsonapi-resources'

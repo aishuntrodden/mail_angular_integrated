@@ -1,16 +1,21 @@
-class MailController < ApplicationController
+class MailsController < ApplicationController
 
 	 # def index
 	 # 	@users = Mail.all
 	 # 	json_response(@users)
 		#  end
 
-	def create 
-		mailing_system = MailingSystem.new(mail_params)
-		mail_params = mailing_system.send
-		@mail = Mail.create!(mail_params)
-		@mail.token_refreshed = mailing_system.token_refreshed
-		json_response(@mail, :created)
+def create 
+		byebug
+@mail = Mailing.create!(mail_params)
+json_response(@mail, :created)
+byebug
+mailing_system = MailingSystem.new(mail_params)
+mail_params = mailing_system.send
+
+		# @mail = Mail.create(mail_params)
+		# # @mail.token_refreshed = mailing_system.token_refreshed
+		# json_response(@mail, :created)
 	end
 
 	# def show

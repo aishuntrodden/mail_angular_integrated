@@ -1,5 +1,5 @@
 Mail::Application.routes.draw do
-  resources :mail
+  resources :mails
   #get "mail/send"
 
   # The priority is based upon order of creation:
