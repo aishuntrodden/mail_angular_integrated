@@ -1,9 +1,9 @@
 class MailsController < ApplicationController
 
-	 # def index
-	 # 	@users = Mail.all
-	 # 	json_response(@users)
-		#  end
+	 def index
+	 	@mail = Mailing.all
+	 	json_response(@mail)
+		 end
 
 def create 
 		byebug
